@@ -1,0 +1,11 @@
+Step 1: Copy the file from my repositery vijayvishwakarma696/HCP ,Log-In-Form.html,Log-In-Form.php,Sign-Up-Form.html,Sign-Up-Form.php,Sucess-Signup.html,Success-Login.html,connectivity.php.
+step 2: Paste all these files to the htdocs folder of Xampp Server.
+step 3: Open Xampp server and Start Apache and Mysql server.
+step 4: Open any web browser and type localhost, After then a welcome page will apear.
+step 5: Go to phpmyadmin and create a Database name "register". (As included in connectivity.php Code).
+step 6: In register databasse create 3 coloums name as "name","email","password" respectively.
+step 7: After Successfully creation of database save the databse.
+step 8: Then run the file Sign-Up-Form.html through localhost. (like "localhost/Sign-Up-Form.html").
+Now Run Your Program.
+Best Of Luck.
+Be Happy.
