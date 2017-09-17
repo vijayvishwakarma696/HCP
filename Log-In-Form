@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>Login Page</title>
+<script>
+function Validate() {
+		var x = document.getElementById("conEmail").value;
+		var atpos = x.indexOf("@");
+		var dotpos = x.lastIndexOf(".");
+		if(x==0){
+	alert("Email should not be Empty!");
+	return false;
+	}
+		
+		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");						
+	
+        return false;
+    }
+	return true;
+	}
+	
+</script>
+<style>
+body{
+background-image:url("pureblackimage.jpg");
+}
+.container{
+margin-left:350px;
+color:white;
+
+}
+.imgcontainer{
+margin-left:500px;
+}
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 5px solid blue;
+    box-sizing: border-box;
+	box-shadow:10px 10px 10px blue;
+	margin-left:0px;
+	font-weight:bold;
+}
+.m{
+color:white;
+}
+button{
+background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border:3px solid blue;
+    cursor: pointer;
+    width:25%;
+	border-radius:50px;
+	font-weight:bold;
+	}
+img.avatar{
+   border:5px solid silver;
+   width:150px;
+   height:150px;
+   
+    box-shadow: 0 0 20px 10px gold;
+	border-radius:50%;
+}
+.registerbtn{
+	padding: 14px 20px;
+    background-color:orange;
+	width:25%;
+	color:black;
+	font-weight:bold;
+}
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+	color: white;
+    margin: 8px 0;
+    border:3px solid blue;
+    cursor: pointer;
+    width:25%;
+	border-radius:50px;
+	font-weight:bold;
+}
+
+.submitbtn{
+background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border:3px solid blue;
+    cursor: pointer;
+    width:25%;
+	border-radius:50px;
+}
+p{
+font-size:25px;
+}
+
+</style>
+</head>
+<body>
+<div class="m">
+<!--h1>Login Page</h1>
+<h3>Welcome</h3-->
+</div>
+<form action="Log-In-Form.php" method="post">
+<fieldset style="border:10px solid red;">
+<div class="imgcontainer">
+<img src="login.jpg" alt="login img" class="avatar">
+</div>
+<div class="container">
+<label><b>Email-id:</b></label><br>
+<input type="text" name="user" placeholder="Enter Email" id="conEmail" required><br>
+<label><b>Password</b></label><br>
+<input type="password" name="pass" placeholder="Enter Password" required>
+<br><br><br>
+<input type="reset" class="cancelbtn" value="Cancel"> <input type="submit" value="Submit" name="submit" class="submitbtn" onclick="return Validate()"><br><br>
+<p><b>If You are New Here ,Then Register <b><a href="Sign-Up-Form.html"> <button type="button" class="registerbtn"  >Register</button></a></p>
+	
+</div>
+</fieldset>
+</form>
+</body>
+</html>
