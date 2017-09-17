@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+    function Validate() {
+		var x = document.getElementById("conEmail").value;
+		var y = document.getElementById("conName").value;
+		var atpos = x.indexOf("@");
+		var dotpos = x.lastIndexOf(".");
+		if(y==0){
+	alert("Name should not be Empty!");
+	return false;
+	}
+		if(x==0){
+	alert("Email should not be Empty!");
+	return false;
+	}
+		if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");						
+	
+        return false;
+    }
+	
+	
+
+	
+        var password = document.getElementById("txtPassword").value;
+        var confirmPassword = document.getElementById("txtConfirmPassword").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+		
+    return true;
+	}
+</script>
+
+<style>
+body {
+    background-image: url("pureblackimage.jpg");
+    
+}
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 5px solid blue;
+    box-sizing: border-box;
+	box-shadow:10px 10px 10px blue;
+	margin-left:0px;
+	font-weight:bold;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border:3px solid blue;
+    cursor: pointer;
+    width:20%;
+	border-radius:50px;
+	font-weight:bold;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+	color: white;
+    margin: 8px 0;
+    border:3px solid blue;
+    cursor: pointer;
+    width:20%;
+	border-radius:50px;
+	font-weight:bold;
+}
+.loginbtn {
+padding: 14px 20px;
+background-color:orange;
+color:black;
+font-weight:bold;	
+}
+
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {
+    float: left;
+    width:25%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+	margin-left:320px;
+	color:white;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+.imgcontainer{
+ /*text-align: center;*/
+    margin-left:500px;
+	
+
+}
+img.avatar{
+    border:5px solid silver;
+    width:150px;
+    height:150px;
+    box-shadow: 0 0 20px 10px gold;
+	border-radius:50%;
+}
+p{
+font-size:25px;
+}
+
+</style>
+<body>
+
+<!--h2 style="color:white;">Signup Form</h2-->
+
+<form name="myForm" action="Sign-Up-Form.php" method="post">
+<fieldset style="border:10px solid red">
+<!--legend></legend-->
+<div class="imgcontainer">
+<img src="register.jpg	" alt="SignUp Page Image" class="avatar">
+</div>
+  <div class="container">
+	 <label><b>Name</b></label><br>
+    <input type="text" placeholder="Enter Name" name="name" id="conName" required><br>
+  
+    <label><b>Email</b></label><br>
+    <input type="text" placeholder="Enter Email" name="email" id="conEmail" required><br>
+
+    <label><b>Password</b></label><br>
+    <input type="password" placeholder="Enter Password" name="password" id="txtPassword" required><br>
+
+    <label><b>Confirm Password</b></label><br>
+    <input type="password" placeholder="Confirm Password" name="psw-repeat" id="txtConfirmPassword" required><br>
+    <input type="checkbox"> Remember me
+    <h4>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</h4>
+
+    <div class="clearfix">
+      <input type="reset" class="cancelbtn" value="Cancel">
+      <button type="submit" class="signupbtn" onclick="Validate()">Sign Up</button>
+    </div>
+	<p><b>Already registerd.</b></p>
+	<p><b>LogIn here. </b><a href="Log-In-Form.html"><button type="button" class="loginbtn">LogIn</button></a><br>
+  </div>
+  </fieldset>
+</form>
+
+</body>
+</html>
